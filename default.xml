@@ -825,4 +825,7 @@
 
   <repo-hooks in-project="platform/tools/repohooks" enabled-list="pre-upload" />
 
+ <!-- WeebProjekt -->
+ <include name="remove.xml" />
+
 </manifest>
