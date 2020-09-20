@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
+  <remote  name="caf"
+           fetch="https://github.com/WeebProjekt-CAF"
+           revision="cheese"
+           sync-j="12" />
+
   <!-- Build -->
   <project path="build/make" name="platform_build" remote="weeb" groups="pdk" >
     <copyfile src="core/root.mk" dest="Makefile" />
@@ -15,15 +20,56 @@
     <linkfile src="root.bp" dest="Android.bp" />
     <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
   </project>
+  <project path="bionic" name="platform_bionic" remote="weeb" />
+  <project path="bootable/recovery" name="platform_bootable_recovery" remote="weeb" /> 
 
-  <!-- Frameworks -->
+  <!--Recovery-->
+  <project path="build/blueprint" name="platform_build_blueprint" remote="weeb" />
+  
+  <!-- frameworks -->
   <project path="frameworks/base" name="platform_frameworks_base" remote="weeb" />
+  <project path="frameworks/av" name="platform_frameworks_av" remote="weeb" />
+ <project path="frameworks/native" name="platform_frameworks_native" remote="weeb" />
+
+   <!-- Manifest -->
   <project path="manifest" name="platform_manifest"  remote="weeb" />
-  <project path="system/core" name="platform_system_core" remote="weeb" />
-  <project path="vendor/weeb" name="platform_vendor_weeb" remote="weeb" />
+
+
+  <!--hardware-->
+  <project path="hardware/libhardware" name="platform_hardware_libhardware" remote="weeb" />
+
+
+  <!-- External -->
   <project path="external/selinux" name="platform_external_selinux" remote="weeb" />
   <project path="external/tinycompress" name="platform_external_tinycompress" remote="weeb" /> 
-  <project path="hardware/libhardware" name="android_hardware_libhardware" remote="weeb" />
-  <project path="bionic" name="android_bionic" remote="weeb" />
+  <project path="external/guice" name="platform_external_guice" remote="weeb" />
 
+
+  <!-- system -->
+  <project path="system/core" name="platform_system_core" remote="weeb" />
+  <project path="system/vold" name="platform_system_vold" remote="weeb" />
+  <project path="system/bt" name="platform_system_bt" remote="weeb" />
+  <project path="system/sepolicy" name="platform_system_sepolicy" remote="weeb" />
+
+
+  <!-- packages -->
+  <project path="packages/apps/Settings" name="platform_packages_apps_Settings" remote="weeb" />
+  <project path="packages/apps/Launcher3" name="platform_packages_apps_Launcher3" remote="weeb" />
+  <project path="packages/apps/ThemePicker" name="platform_packages_apps_ThemePicker" remote="weeb" />
+
+
+  <!-- Qualcomm vendor repos -->
+  <project path="vendor/qcom/opensource/commonsys/bluetooth_ext" name="platform_vendor_qcom_opensource_bluetooth_ext" remote="caf" />
+  <project path="vendor/qcom/opensource/commonsys/packages/apps/Bluetooth" name="platform_vendor_qcom_opensource_packages_apps_Bluetooth" remote="caf" />
+  <project path="vendor/qcom/opensource/commonsys/system/bt" name="platform_vendor_qcom_opensource_system_bt" remote="caf" />
+  <project path="vendor/qcom/opensource/vibrator" name="platform_vendor_qcom_opensource_vibrator" remote="caf" />
+  <project path="hardware/qcom-caf/msm8998/audio" name="platform_hardware_qcom_audio" remote="caf" />
+  <project path="hardware/qcom-caf/wlan" name="platform_hardware_qcom_wlan" remote="caf" />
+
+  <!-- Tools -->
+  <project path="tools/metalava" name="platform_tools_metalava" remote="weeb" />
+  <project path="prebuilts/tools-weeb" name="platform_prebuilts_tools-weeb" remote="weeb" />
+
+
+  
 </manifest>

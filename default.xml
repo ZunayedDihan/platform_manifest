@@ -841,5 +841,6 @@
 
  <!-- All WeebProjekt repos-->
  <include name="snippets/weeb.xml" />
-
+ <include name="snippets/los.xml" />
+ <include name="snippets/temp.xml" />
 </manifest>
