@@ -69,7 +69,7 @@
   <!-- Tools -->
   <project path="tools/metalava" name="platform_tools_metalava" remote="weeb" />
   <project path="prebuilts/tools-weeb" name="platform_prebuilts_tools-weeb" remote="weeb" />
-
+  <project path="prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8" name="prebuilts_gcc_linux-x86_host_x86_64-linux-glibc2.17-4.8" remote="weeb" clone-depth="1"/>
 
   
 </manifest>

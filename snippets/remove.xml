@@ -83,6 +83,8 @@
   <remove-project name="platform/prebuilts/go/darwin-x86" />
   <remove-project name="platform/prebuilts/python/darwin-x86/2.7.5" />
   <remove-project name="platform/bootable/recovery" />
+  <remove-project name="prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8" />
+ 
   
 
   <!-- frameworks -->
