@@ -83,10 +83,9 @@
   <remove-project name="platform/prebuilts/go/darwin-x86" />
   <remove-project name="platform/prebuilts/python/darwin-x86/2.7.5" />
   <remove-project name="platform/bootable/recovery" />
-  <remove-project name="prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8" />
+  <remove-project name="platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8" />
  
   
-
   <!-- frameworks -->
  <remove-project name="platform/frameworks/base" />
  <remove-project name="platform/frameworks/av" />
@@ -106,6 +105,7 @@
   <remove-project name="platform/build/blueprint" />
 
   <remove-project name="platform/bionic" />
+  <remove-project name="platform/hardware/interfaces" />
 
   <!-- packages -->
   <remove-project name="platform/packages/apps/QuickSearchBox" />
@@ -116,6 +116,7 @@
   <remove-project name="platform/packages/apps/ThemePicker" />
   <remove-project name="platform/packages/apps/LegacyCamera" />
   <remove-project name="platform/packages/apps/Launcher3" />
+  <remove-project name="platform/packages/apps/SettingsIntelligence" />
  
   <!-- external -->
   <remove-project name="platform/external/selinux" />

@@ -32,6 +32,5 @@
   
   <project path="vendor/qcom/opensource/audio" name="yaap/vendor_qcom_opensource_audio" remote="github" revision="eleven" />
   <project path="device/qcom/sepolicy-legacy-um" name="RevengeOS/android_device_qcom_sepolicy" remote="github" revision="r11.0-legacy-um" />
-  <project path="vendor/qcom/opensource/power" name="PixelExperience/vendor_qcom_opensource_power" remote="github" revision="ten" />
  
 </manifest>
