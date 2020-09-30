@@ -123,8 +123,8 @@
   <remove-project name="platform/external/tinycompress" />
   <remove-project name="platform/external/guice" />
   <remove-project name="platform/external/zlib" />
-
-
+  <remove-project name="platform/hardware/qcom/wlan" />
+  <remove-project name="platform/hardware/qcom/gps" />
   <remove-project name="platform/hardware/libhardware" />
   <remove-project name="platform/tools/metalava" />
 </manifest>
