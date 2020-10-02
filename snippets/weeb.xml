@@ -62,6 +62,7 @@
   <!--<project path="vendor/weeb"name="platform_vendor_weeb" remote="weeb" /> -->
 
   <project path="hardware/interfaces" name="platform_hardware_interfaces" remote="weeb" />  
+  <project path="hardware/ril" name="platform_hardware_ril" remote="weeb"/>
 
   <!-- Qualcomm vendor repos -->
   <project path="vendor/qcom/opensource/commonsys/bluetooth_ext" name="platform_vendor_qcom_opensource_bluetooth_ext" remote="caf" />

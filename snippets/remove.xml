@@ -106,6 +106,7 @@
 
   <remove-project name="platform/bionic" />
   <remove-project name="platform/hardware/interfaces" />
+  <remove-project name="platform/hardware/ril" />
 
   <!-- packages -->
   <remove-project name="platform/packages/apps/QuickSearchBox" />
