@@ -1,29 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
-  <!--Ant Service-->
-  <project path="external/ant-wireless/ant_native" name="LineageOS/android_external_ant-wireless_ant_native" remote="github" revision="lineage-17.1" />
-  <project path="external/ant-wireless/ant_service" name="LineageOS/android_external_ant-wireless_ant_service" remote="github" revision="lineage-17.1" />
-  <project path="external/ant-wireless/antradio-library" name="LineageOS/android_external_ant-wireless_antradio-library" remote="github" revision="lineage-17.1" />
+ <remote name="arrow"
+           fetch="https://github.com/ArrowOS/"
+           revision="refs/heads/arrow-11.0" />
 
-  <!--Json -c -->
-  <project path="external/json-c" name="LineageOS/android_external_json-c" remote="github" revision="lineage-17.1" />
+  <remote name="los"
+           fetch="https://github.com/LineageOS/" />
 
   <!--Apps -->
   <project path="packages/resources/devicesettings" name="LineageOS/android_packages_resources_devicesettings" remote="github" revision="lineage-17.1" />
-  <project path="packages/apps/UnifiedEmail" name="LineageOS/android_packages_apps_UnifiedEmail" remote="github" revision="lineage-17.1" />
-  <project path="packages/apps/Email" name="LineageOS/android_packages_apps_Email" remote="github" revision="lineage-17.1" />
 
+  <!-- CAF HALs -->
+  <project path="hardware/qcom-caf/common" name="android_hardware_qcom-caf_common" remote="arrow" >
+    <!-- add guard for AOSP hardware/qcom dir -->
+    <linkfile src="os_pickup_aosp.mk" dest="hardware/qcom/Android.mk" />
+    <!-- for AOSP sdm845 and sm8150, we override os_pickup.mk -->
+    <linkfile src="os_pickup.mk" dest="hardware/qcom/sdm845/Android.mk" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom/sm8150/Android.mk" />
+    <!-- add guards for CAF repositories -->
+    <linkfile src="os_pickup.bp" dest="hardware/qcom-caf/msm8998/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/msm8998/Android.mk" />
+  </project>
+  <project path="hardware/qcom/bootctrl" name="android_hardware_qcom_bootctrl" remote="arrow" />
+  <project path="hardware/qcom/audio/default" name="android_hardware_qcom_audio" groups="qcom,qcom_audio" remote="arrow" />
+  <project path="hardware/qcom/display" name="android_hardware_qcom_display" groups="pdk,qcom,qcom_display" remote="arrow" />
+  <project path="hardware/qcom/media" name="android_hardware_qcom_media" groups="qcom" remote="arrow"/>
+  <project path="hardware/qcom/camera" name="android_hardware_qcom_camera" groups="qcom_camera" remote="arrow" />
+  <project path="hardware/qcom/gps" name="android_hardware_qcom_gps" groups="qcom,qcom_gps" remote="arrow" />
+  <project path="hardware/qcom/power" name="android_hardware_qcom_power" groups="qcom,pdk" remote="arrow" />
+  <project path="hardware/ril" name="android_hardware_ril" groups="pdk" remote="arrow" />
+  <project path="hardware/qcom/bt" name="android_hardware_qcom_bt" groups="qcom" remote="arrow" />
 
-  <project path="vendor/qcom/opensource/commonsys-intf/bluetooth" name="LineageOS/android_vendor_qcom_opensource_bluetooth-commonsys-intf" remote="github" revision="lineage-17.1" />
-  <project path="vendor/qcom/opensource/dataservices" name="LineageOS/android_vendor_qcom_opensource_dataservices" remote="github" revision="lineage-17.1" />
-  <project path="vendor/codeaurora/telephony" name="LineageOS/android_vendor_codeaurora_telephony" remote="github" revision="lineage-17.1" />
-  <project path="vendor/qcom/opensource/thermal-engine" name="LineageOS/android_vendor_qcom_opensource_thermal-engine" remote="github" revision="lineage-17.1" />
-  <!--<project path="hardware/qcom-caf/thermal" name="LineageOS/android_hardware_qcom_thermal" remote="github" revision="lineage-17.1" /> -->
-  <project path="vendor/qcom/opensource/interfaces" name="LineageOS/android_vendor_qcom_opensource_interfaces" remote="github" revision="lineage-17.1" />
-
-
-    <!-- prebuilts -->
+   <!-- prebuilts -->
   <project path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" name="LineageOS/android_prebuilts_gcc_linux-x86_aarch64_aarch64-linux-android-4.9" remote="github" revision="lineage-17.1" />
   <project path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9" name="LineageOS/android_prebuilts_gcc_linux-x86_arm_arm-linux-androideabi-4.9" remote="github" revision="lineage-17.1" />
+
+  <!-- External -->
+  <project path="external/bash" name="android_external_bash" remote="los" revision="lineage-18.0" />
+  <project path="external/connectivity" name="android_external_connectivity" remote="los" revision="lineage-17.1" />
+  <project path="external/exfat" name="android_external_exfat" remote="los" revision="lineage-17.1" />
+  <project path="external/htop" name="android_external_htop" remote="los" revision="lineage-17.1" />
+  <project path="external/libncurses" name="android_external_libncurses" remote="los" revision="lineage-17.1" />
+  <project path="external/libnfc-nxp" name="android_external_libnfc-nxp" remote="los" revision="lineage-17.1" />
+  <project path="external/nano" name="android_external_nano" remote="los" revision="lineage-17.1" />
+  <project path="external/ntfs-3g" name="android_external_ntfs-3g" remote="los" revision="lineage-17.1" />
+  <project path="external/p7zip" name="android_external_p7zip" remote="los" revision="lineage-17.1" />
+  <project path="external/pigz" name="android_external_pigz" remote="los" revision="lineage-17.1" />
+  <project path="external/rsync" name="android_external_rsync" remote="los" revision="lineage-17.1" />
+  <project path="external/unrar" name="android_external_unrar" remote="los" revision="lineage-17.1" />
+  <project path="external/vim" name="android_external_vim" remote="los" revision="lineage-17.1" />
+  <project path="external/zip" name="android_external_zip" remote="los" revision="lineage-17.1" />
 </manifest>

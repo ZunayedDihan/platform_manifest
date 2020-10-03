@@ -1,9 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
+  <remote  name="github"
+           fetch="https://github.com/" />
+
+
+  <remote  name="gitlab"
+           fetch="https://gitlab.com/" />
+
+  <remote name="weeb"
+           fetch="https://github.com/WeebProjekt/" 
+           revision="cheese" />
+
+
   <remote  name="caf"
            fetch="https://github.com/WeebProjekt-CAF"
            revision="cheese"
+           sync-j="12" />
+ 
+  <remote  name="wip"
+           fetch="https://github.com/weeb-wip"
+           revision="cheese-staging"
            sync-j="12" />
 
   <!-- Build -->
@@ -34,10 +51,9 @@
    <!-- Manifest -->
   <project path="manifest" name="platform_manifest"  remote="weeb" />
 
-
   <!--hardware-->
   <project path="hardware/libhardware" name="platform_hardware_libhardware" remote="weeb" />
-
+  <project path="hardware/interfaces" name="platform_hardware_interfaces" remote="weeb" />  
 
   <!-- External -->
   <project path="external/selinux" name="platform_external_selinux" remote="weeb" />
@@ -51,26 +67,26 @@
   <project path="system/bt" name="platform_system_bt" remote="weeb" />
   <project path="system/sepolicy" name="platform_system_sepolicy" remote="weeb" />
 
+  <!-- Sepolicy -->
+  <project path="device/qcom/sepolicy" name="platform_device_qcom_sepolicy" remote="wip" />
+  <project path="device/qcom/sepolicy-legacy" name="platform_device_qcom_sepolicy-legacy" remote="wip" />
+  <project path="device/qcom/sepolicy-legacy-um" name="platform_device_qcom_sepolicy-legacy-um" remote="wip" />
 
   <!-- packages -->
+  <project path="packages/apps/WeebCafe" name="platform_packages_apps_WeebCafe" remote="weeb" />
   <project path="packages/apps/Settings" name="platform_packages_apps_Settings" remote="weeb" />
   <project path="packages/apps/Launcher3" name="platform_packages_apps_Launcher3" remote="weeb" />
   <project path="packages/apps/ThemePicker" name="platform_packages_apps_ThemePicker" remote="weeb" />
   <project path="packages/apps/SettingsIntelligence" name="platform_packages_apps_SettingsIntelligence" remote="weeb" />
-  
-  <!--Private -->
-  <!--<project path="vendor/weeb"name="platform_vendor_weeb" remote="weeb" /> -->
 
-  <project path="hardware/interfaces" name="platform_hardware_interfaces" remote="weeb" />  
-  <project path="hardware/ril" name="platform_hardware_ril" remote="weeb"/>
+  <!-- Prebuilts -->
+  <project path="prebuilts/abi-dumps/vndk" name="platform_prebuilts_abi-dumps_vndk" remote="weeb" />
 
   <!-- Qualcomm vendor repos -->
+  <project path="vendor/qcom/opensource/commonsys-intf/bluetooth" name="LineageOS/android_vendor_qcom_opensource_bluetooth-commonsys-intf" remote="github" revision="lineage-17.1" />
   <project path="vendor/qcom/opensource/commonsys/bluetooth_ext" name="platform_vendor_qcom_opensource_bluetooth_ext" remote="caf" />
   <project path="vendor/qcom/opensource/commonsys/packages/apps/Bluetooth" name="platform_vendor_qcom_opensource_packages_apps_Bluetooth" remote="caf" />
   <project path="vendor/qcom/opensource/commonsys/system/bt" name="platform_vendor_qcom_opensource_system_bt" remote="caf" />
-  <project path="vendor/qcom/opensource/vibrator" name="platform_vendor_qcom_opensource_vibrator" remote="caf" />
-  <project path="hardware/qcom-caf/msm8998/audio" name="platform_hardware_qcom_audio" remote="caf" />
-  <project path="hardware/qcom-caf/wlan" name="platform_hardware_qcom_wlan" remote="caf" />
 
   <!-- Tools -->
   <project path="tools/metalava" name="platform_tools_metalava" remote="weeb" />

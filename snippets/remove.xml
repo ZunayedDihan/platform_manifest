@@ -85,19 +85,12 @@
   <remove-project name="platform/bootable/recovery" />
   <remove-project name="platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8" />
  
-  
-  <!-- frameworks -->
- <remove-project name="platform/frameworks/base" />
- <remove-project name="platform/frameworks/av" />
- <remove-project name="platform/frameworks/native" />
-
-
+ 
    <!-- system -->
   <remove-project name="platform/system/core" />
   <remove-project name="platform/system/vold" />
   <remove-project name="platform/system/bt" />
   <remove-project name="platform/system/sepolicy" />
- 
 
   <!-- Weeb-->
   <remove-project name="platform/build" />
@@ -118,6 +111,22 @@
   <remove-project name="platform/packages/apps/LegacyCamera" />
   <remove-project name="platform/packages/apps/Launcher3" />
   <remove-project name="platform/packages/apps/SettingsIntelligence" />
+
+  <!-- Framework -->
+  <remove-project name="platform/frameworks/base" />
+  <remove-project name="platform/frameworks/av" />
+  <remove-project name="platform/frameworks/native" />
+
+  <!-- Hardware -->
+  <remove-project name="platform/hardware/libhardware" />
+  <remove-project name="platform/hardware/qcom/display" />
+  <remove-project name="platform/hardware/qcom/gps" />
+  <remove-project name="platform/hardware/qcom/media" />
+  <remove-project name="platform/hardware/qcom/audio" />
+  <remove-project name="platform/hardware/qcom/bootctrl" />
+  <remove-project name="platform/hardware/qcom/camera" />
+  <remove-project name="platform/hardware/qcom/power" />
+  <remove-project name="platform/hardware/qcom/bt" />
  
   <!-- external -->
   <remove-project name="platform/external/selinux" />
@@ -125,7 +134,5 @@
   <remove-project name="platform/external/guice" />
   <remove-project name="platform/external/zlib" />
   <remove-project name="platform/hardware/qcom/wlan" />
-  <remove-project name="platform/hardware/qcom/gps" />
-  <remove-project name="platform/hardware/libhardware" />
   <remove-project name="platform/tools/metalava" />
 </manifest>

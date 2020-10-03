@@ -7,16 +7,6 @@
   <default revision="refs/tags/android-11.0.0_r3"
            remote="aosp"
            sync-j="4" />
-  
-  <remote name="weeb"
-           fetch="https://github.com/WeebProjekt/" 
-           revision="cheese" />
-
-  <remote  name="github"
-           fetch="https://github.com/" />
-
-  <remote name="gitlab"
-           fetch="https://gitlab.com/" />
 
 
   <project path="build/make" name="platform/build" groups="pdk" >
@@ -842,5 +832,5 @@
  <!-- All WeebProjekt repos-->
  <include name="snippets/weeb.xml" />
  <include name="snippets/los.xml" />
- <include name="snippets/temp.xml" />
+ <include name="snippets/lavender.xml" />
 </manifest>
