@@ -68,9 +68,10 @@
   <project path="system/sepolicy" name="platform_system_sepolicy" remote="weeb" />
 
   <!-- Sepolicy -->
-  <project path="device/qcom/sepolicy" name="platform_device_qcom_sepolicy" remote="wip" />
+  <project path="device/qcom/sepolicy" name="platform_device_qcom_sepolicy" remote="wip" revision="cheese" />
   <project path="device/qcom/sepolicy-legacy" name="platform_device_qcom_sepolicy-legacy" remote="wip" />
-  <project path="device/qcom/sepolicy-legacy-um" name="platform_device_qcom_sepolicy-legacy-um" remote="wip" />
+  <project path="device/weeb/sepolicy" name="platform_device_weeb_sepolicy" remote="wip"  revision="cheese" />
+  <project path="device/qcom/sepolicy-legacy-um" name="platform_device_qcom_sepolicy-legacy-um" remote="wip" revision="cheese" />
 
   <!-- packages -->
   <project path="packages/apps/WeebCafe" name="platform_packages_apps_WeebCafe" remote="weeb" />
@@ -85,7 +86,7 @@
   <!-- Qualcomm vendor repos -->
   <project path="vendor/qcom/opensource/commonsys-intf/bluetooth" name="LineageOS/android_vendor_qcom_opensource_bluetooth-commonsys-intf" remote="github" revision="lineage-17.1" />
   <project path="vendor/qcom/opensource/commonsys/bluetooth_ext" name="platform_vendor_qcom_opensource_bluetooth_ext" remote="caf" />
-  <project path="vendor/qcom/opensource/commonsys/packages/apps/Bluetooth" name="platform_vendor_qcom_opensource_packages_apps_Bluetooth" remote="caf" />
+  <project path="vendor/qcom/opensource/commonsys/bluetooth_ext" name="platform_vendor_qcom_opensource_bluetooth_ext" remote="caf" />
   <project path="vendor/qcom/opensource/commonsys/system/bt" name="platform_vendor_qcom_opensource_system_bt" remote="caf" />
 
   <!-- Tools -->
