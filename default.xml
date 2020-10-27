@@ -845,6 +845,6 @@
 
  <!-- All WeebProjekt repos-->
  <include name="snippets/weeb.xml" />
- <include name="snippets/los.xml" />
- <include name="snippets/lavender.xml" />
+ <include name="snippets/temp.xml" />
+ <include name="snippets/lineage.xml" />
 </manifest>

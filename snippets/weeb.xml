@@ -85,13 +85,6 @@
   <!-- Prebuilts -->
   <project path="prebuilts/abi-dumps/vndk" name="platform_prebuilts_abi-dumps_vndk" remote="weeb" />
 
-  <!-- Qualcomm vendor repos -->
-  <project path="vendor/qcom/opensource/commonsys-intf/bluetooth" name="LineageOS/android_vendor_qcom_opensource_bluetooth-commonsys-intf" remote="github" revision="lineage-17.1" />
-  <project path="vendor/qcom/opensource/commonsys/bluetooth_ext" name="platform_vendor_qcom_opensource_bluetooth_ext" remote="caf" />
-  <project path="vendor/qcom/opensource/commonsys/system/bt" name="platform_vendor_qcom_opensource_system_bt" remote="caf" />
-
   <!-- Tools -->
   <project path="tools/metalava" name="platform_tools_metalava" remote="weeb" />
-  <project path="prebuilts/tools-weeb" name="platform_prebuilts_tools-weeb" remote="weeb" />
-  <project path="prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8" name="prebuilts_gcc_linux-x86_host_x86_64-linux-glibc2.17-4.8" remote="weeb" clone-depth="1"/>
 </manifest>
