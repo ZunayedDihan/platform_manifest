@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
+
+  <remote name="weeb"
+           fetch="https://github.com/WeebProjekt/" 
+           revision="cheese" />
+
   <remote  name="github"
            fetch="https://github.com/" />
 
@@ -8,20 +13,11 @@
   <remote  name="gitlab"
            fetch="https://gitlab.com/" />
 
-  <remote name="weeb"
-           fetch="https://github.com/WeebProjekt/" 
-           revision="cheese" />
-
-
-  <remote  name="caf"
-           fetch="https://github.com/WeebProjekt-CAF"
-           revision="cheese"
-           sync-j="12" />
- 
-  <remote  name="wip"
-           fetch="https://github.com/weeb-wip"
-           revision="cheese-staging"
-           sync-j="12" />
+  <!-- CodeAurora additions -->
+  <project path="device/qcom/sepolicy" name="platform_device_qcom_sepolicy" remote="weeb" />
+  <project path="device/qcom/sepolicy-legacy" name="platform_device_qcom_sepolicy-legacy" remote="weeb" />
+  <project path="device/qcom/sepolicy-legacy-um" name="platform_device_qcom_sepolicy-legacy-um" remote="weeb" />
+  <project path="device/qcom/sepolicy_vndr" name="platform_device_qcom_sepolicy_vndr" remote="weeb" />
 
   <!-- Build -->
   <project path="build/make" name="platform_build" remote="weeb" groups="pdk" >
@@ -46,7 +42,7 @@
   <!-- frameworks -->
   <project path="frameworks/base" name="platform_frameworks_base" remote="weeb" />
   <project path="frameworks/av" name="platform_frameworks_av" remote="weeb" />
- <project path="frameworks/native" name="platform_frameworks_native" remote="weeb" />
+   <project path="frameworks/native" name="platform_frameworks_native" remote="weeb" />
 
    <!-- Manifest -->
   <project path="manifest" name="platform_manifest"  remote="weeb" />
@@ -61,19 +57,8 @@
   <project path="external/guice" name="platform_external_guice" remote="weeb" />
   <project path="external/zlib" name="platform_external_zlib" remote="weeb" />
 
-  <!-- system -->
-  <project path="system/core" name="platform_system_core" remote="weeb" />
-  <project path="system/vold" name="platform_system_vold" remote="weeb" />
-  <project path="system/bt" name="platform_system_bt" remote="weeb" />
-  <project path="system/sepolicy" name="platform_system_sepolicy" remote="weeb" />
 
-  <!-- Sepolicy -->
-  <project path="device/qcom/sepolicy" name="platform_device_qcom_sepolicy" remote="wip" revision="cheese" />
-  <project path="device/qcom/sepolicy-legacy" name="platform_device_qcom_sepolicy-legacy" remote="wip" />
-  <project path="device/weeb/sepolicy" name="platform_device_weeb_sepolicy" remote="wip"  revision="cheese" />
-  <project path="device/qcom/sepolicy-legacy-um" name="platform_device_qcom_sepolicy-legacy-um" remote="wip" revision="cheese" />
-
-  <!-- packages -->
+  <!-- Packages repos -->
   <project path="packages/apps/WeebCafe" name="platform_packages_apps_WeebCafe" remote="weeb" />
   <project path="packages/apps/Settings" name="platform_packages_apps_Settings" remote="weeb" />
   <project path="packages/apps/Launcher3" name="platform_packages_apps_Launcher3" remote="weeb" />
@@ -83,8 +68,17 @@
   <project path="vendor/google/pixel" name="platform_vendor_google_pixel" remote="weeb" />
 
   <!-- Prebuilts -->
-  <project path="prebuilts/abi-dumps/vndk" name="platform_prebuilts_abi-dumps_vndk" remote="weeb" />
+  <project path="prebuilts/abi-dumps/vndk" name="platform_prebuilts_abi-dumps_vndk" remote="weeb" clone-depth="1" />
+  <project path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" name="platform_prebuilts_gcc_linux-x86_aarch64_aarch64-linux-android-4.9" remote="weeb" />
+  <project path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9" name="platform_prebuilts_gcc_linux-x86_arm_arm-linux-androideabi-4.9" remote="weeb" />
+
+  <!-- System Repos -->
+  <project path="system/bt" name="platform_system_bt" remote="weeb" />
+  <project path="system/core" name="platform_system_core" remote="weeb" />
+  <project path="system/vold" name="platform_system_vold" remote="weeb" />
+  <project path="system/sepolicy" name="platform_system_sepolicy" remote="weeb" />
 
   <!-- Tools -->
   <project path="tools/metalava" name="platform_tools_metalava" remote="weeb" />
+
 </manifest>
