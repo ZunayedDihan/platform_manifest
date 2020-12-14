@@ -41,6 +41,11 @@
   <project path="external/json-c" name="android_external_json-c" remote="lineage" />
   <project path="external/ntfs-3g" name="android_external_ntfs-3g" remote="lineage" />
 
+  <project path="external/tinyalsa" name="android_external_tinyalsa" remote="lineage" />
+  <project path="external/openssh" name="android_external_openssh" remote="lineage" />
+  <project path="external/gptfdisk" name="android_external_gptfdisk" remote="lineage" />
+
+
   <!-- Packages repos -->
   <project path="packages/resources/devicesettings" name="android_packages_resources_devicesettings" remote="lineage" />
 
