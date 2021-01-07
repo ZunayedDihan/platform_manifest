@@ -119,6 +119,7 @@
   <remove-project name="platform/packages/apps/Launcher3" />
   <remove-project name="platform/packages/apps/SettingsIntelligence" />
   <remove-project name="platform/packages/apps/WallpaperPicker2" />
+ <remove-project name="platform/packages/providers/DownloadProvider" />
 
   <!-- Framework -->
   <remove-project name="platform/frameworks/base" />
